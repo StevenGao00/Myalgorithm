@@ -37,9 +37,12 @@ class singlylinklist:
         self.insert_node_to_tail(new_node)
     def insert_node_to_tail(self, new_node):
         p = self._head
-        while p.next:
-            p=p.next
-        p.next = new_node
+        while p and p._next:
+            p=p._next
+        if p:
+            p._next = new_node
+        else:
+            self._head = new_node
 
     def insert_value_after(self, node:Node, value:int):
         new_node = Node(value)
@@ -48,7 +51,7 @@ class singlylinklist:
         if not Node or not new_node:
             return
         new_node._next = node._next
-        node.next = new_node
+        node._next = new_node
 
     def insert_value_before(self, node:Node, value:int):
         new_node = Node(value)
@@ -110,10 +113,12 @@ class singlylinklist:
     def print_all(self):
         current = self._head
         if current:
-            print(f"{current.data}", end="")
+            #print(f"{current.data}", end="")
+            print(current.data, end="")
             current = current._next
         while current:
-            print(f"->{current.data}", end="")
+            #print(f"->{current.data}", end="")
+            print('->'+str(current.data), end="")
             current = current._next
         print("\n", flush=True)
 
