@@ -1,4 +1,4 @@
-缓存淘汰策略：
+﻿缓存淘汰策略：
     1、FIFO(First in First out)先进先出策略
     2、LEU(Least Frequently used)最少使用策略
     3、LRU(Least Recently used) 最近最少使用策略
