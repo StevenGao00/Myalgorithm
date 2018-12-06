@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import sys
-sys.path.append('D:/alog/Myalgorithm/06_linkedlist')
+#sys.path.append('D:/alog/Myalgorithm/06_linkedlist')
+sys.path.append('E:/python/06_linkedlist')
 
 
 from singly_linklist import singlylinklist
@@ -68,6 +69,25 @@ def create_cycle_linked_list(List):
     print(Str)
     return l
 
+# 合并有序链表
+def merge_sorted_list(l1:Node,l2:Node)->Optional[Node]:
+    if l1 and l2:
+        p1, p2 = l1, l2
+        fake_head = Node(None)
+        current = fake_head
+        while p1 and p2:
+            if p1.data <= p2.data:
+                current._next = p1
+                p1 = p1._next
+            else:
+                current._next = p2
+                p2 = p2._next
+            current = current._next
+        current._next = p1 if p1 else p2
+        return fake_head._next
+    return l1 or l2
+
+
 if __name__=='__main__':
     test_str = range(1,21)
     list1 = singlylinklist()
@@ -86,9 +106,22 @@ if __name__=='__main__':
     for index, Link in enumerate([list1, cylcle_list]):
         cycle_node = cycle_entrance(Link._head)
         if cycle_node:
-            print(f'链表 {index +1} 环入口是: ',cycle_node.data)
+            print('链表 cylcle_list 环入口是: ' , cycle_node.data+1 ,'\n')
         else:
-            print(f'链表 {index +1} 不存在环！')
+            print('链表 list1 不存在环!\n')
 
+    # 生成两个链表
+    List1 = range(1,10,2)
+    List2 = range(1,10,1)
+    linklist1 = singlylinklist()
+    linklist2 = singlylinklist()
+    for i in List1:
+        linklist1.insert_value_to_tail(i)
+    for i in List2:
+        linklist2.insert_value_to_tail(i)
+
+    merge_list = singlylinklist()
+    merge_list._head = merge_sorted_list(linklist1._head,linklist2._head)
+    merge_list.print_all()
 
 
