@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import sys
-#sys.path.append('D:/alog/Myalgorithm/06_linkedlist')
-sys.path.append('E:/python/06_linkedlist')
+sys.path.append('D:/alog/Myalgorithm/06_linkedlist')
+#sys.path.append('E:/python/06_linkedlist')
 
 
 from singly_linklist import singlylinklist
@@ -88,16 +88,54 @@ def merge_sorted_list(l1:Node,l2:Node)->Optional[Node]:
     return l1 or l2
 
 
+# 删除链表倒数第n个节点，返回链表的头结点，如果链表节点个数小于n，直接返回头结点
+def remove_nth_from_end(head:Node, n:int) -> Optional[Node]:
+    fast = head
+    count = 0
+    while fast and count < n:
+        fast = fast._next
+        count += 1
+    if not fast and count < n:
+        print('链表长度小于n!\n')
+        return head
+    if not fast and count == n:
+        return head._next
+
+    slow = head
+    while fast._next:
+        slow, fast = slow._next, fast._next
+    slow._next = slow._next._next
+    return head
+
+def find_middle_node(head:Node) -> Optional[Node]:
+    slow, fast = head, head
+    fast = fast._next if fast else None
+    while fast and fast._next:
+        slow = slow._next
+        fast = fast._next._next
+    return slow
+
 if __name__=='__main__':
-    test_str = range(1,21)
+    test_str = range(0,6)
     list1 = singlylinklist()
     for i in test_str:
         list1.insert_value_to_tail(i)
     list1.print_all()
+    # 翻转链表
     list1._head = reverse_list(list1._head)
     list1.print_all()
+    # 查找链表中间节点
+    middle_node = find_middle_node(list1._head)
+    if middle_node:
+        print('中间节点是: %d \n' %  middle_node.data)
 
-    #  生成循环链表，检测环
+    # 删除倒数第n 个链表
+    list1._head = remove_nth_from_end(list1._head, 10)
+    list1.print_all()
+    list1._head = remove_nth_from_end(list1._head, 20)
+    list1.print_all()
+
+    # 生成循环链表，检测环
     cylcle_list = create_cycle_linked_list(test_str)
     has_cycle = has_cycle(cylcle_list._head)
     print('\ncylcle_list has cycle?',has_cycle, '\n')
