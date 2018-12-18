@@ -35,7 +35,11 @@ class AarrayQueue:
 if __name__=="__main__":
     q = AarrayQueue(10)
     for i in range(0, 10):
-        flag = AarrayQueue.enqueue(str(i))
+        q.enqueue(str(i))
     q.dequeue()
     q.dequeue()
+    print(q)
+    q.enqueue(str(88))
+    q.enqueue(str(99))
+    q.enqueue(str(77))
     print(q)
