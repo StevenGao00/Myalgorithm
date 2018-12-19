@@ -62,9 +62,38 @@ def insertionSort(arr):
         arr[j] = tmp
     return arr
 
+'''
+(4) 希尔排序
+    希尔排序基于插入排序以下两点性质改进：
+        a)插入排序在对几乎已经排好序的数据操作时，效率高，即可以达到线性排序的效率。
+        b)插入排序一般来说是低效的，因为插入排序每次只能将数据移动一位。
+    算法步骤：
+        a)选择增量序列 t1, t2, ..., tk, 其中 t1>t2, tk=1。    increment初始化为len(arr), increment = increment//3 + 1
+        b)按增量个数k对序列进行k趟排序。
+        c)每趟排序，根据增量ti将待排序列分割成若干长度为 m 的子序列，分别对各子表的序列进行直接插入排序
+            ，仅增量因子为1时，整个序列作为一张表来处理。
+    希尔排序是原地排序，但是不是稳定算法。平均时间复杂的O(nlogn)~O(n^2)，空间复杂度O(1)。
+'''
+def shellSort(arr):
+    length = len(arr)
+    increment = length
+    while increment > 1:
+        increment = increment//3 + 1
+        for i in range(increment, length, increment):
+            if arr[i] < arr[i-increment]:
+                tmp = arr[i]
+                j = i- increment
+                while j>=0 and arr[j] > tmp:
+                    arr[j+increment] = arr[j]
+                    j -= increment
+                arr[j+increment] = tmp
+    return arr
+
+
 if __name__=="__main__":
     List = list(range(20,0,-1))
     List1 = bubbleSort(List[:])
     List2 = selectionSort(List[:])
     List3 = insertionSort(List[:])
-    print(List, '\n', List1, '\n', List2, '\n', List3)
+    List4 = shellSort(List[:])
+    print(List, '\n', List1, '\n', List2, '\n', List3, '\n', List4)
