@@ -7,8 +7,8 @@ from typing import Optional
 
 class AarrayQueue:
     def __init__(self, capacity:int):
-        self._items = []
         self._capacity = capacity
+        self._items = [None]*self._capacity
         self._head = 0
         self._tail = 0
     def enqueue(self, item:str) -> bool:
@@ -20,7 +20,7 @@ class AarrayQueue:
                     self._items[i] = self._items[i+self._head]
                 self._tail = self._tail - self._head
                 self._head = 0
-        self._items.insert(self._tail, item)
+        self._items[self._tail] = item
         self._tail += 1
         return True
     def dequeue(self)->Optional[str]:
