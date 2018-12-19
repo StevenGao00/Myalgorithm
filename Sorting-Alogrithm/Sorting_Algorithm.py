@@ -89,11 +89,40 @@ def shellSort(arr):
                 arr[j+increment] = tmp
     return arr
 
+'''
+(5) 归并排序
+    归并排序利用分治（归并）思想，两种实现方法：自上而下的递归实现（需注意递归深度）、自下而上的迭代实现。
+    算法步骤：
+        a)初始化序列含有n个记录，则可以看作含有n个有序的子序列，每个子序列长度为1,然后两两归并，得到(n+1)//2个长度为2或1的有序子序列。
+        b)重复以上步骤直到得到一个长度为n的有序序列为止。（此方法是2路归并）
+'''
+# 递归方法实现归并排序
+def mergeSort(arr):
+    if len(arr) < 2:
+        return arr
+    mid_index = len(arr)//2
+    left, right = arr[:mid_index], arr[mid_index:]
+    return merge(mergeSort(left), mergeSort(right))
+
+def merge(left,right):
+    result = []
+    while left and right:
+        if left[0] <= right[0]:
+            result.append(left.pop(0))
+        else:
+            result.append(right.pop(0))
+    if left:
+        result = result + left
+    if right:
+        result = result + right
+    return result
+
 
 if __name__=="__main__":
-    List = list(range(20,0,-1))
+    List = list(range(10,0,-1))
     List1 = bubbleSort(List[:])
     List2 = selectionSort(List[:])
     List3 = insertionSort(List[:])
     List4 = shellSort(List[:])
-    print(List, '\n', List1, '\n', List2, '\n', List3, '\n', List4)
+    List5 = mergeSort(List[:])
+    print(List, '\n', List1, '\n', List2, '\n', List3, '\n', List4, '\n', List5)
