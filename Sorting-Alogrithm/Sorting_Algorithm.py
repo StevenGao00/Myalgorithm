@@ -63,7 +63,7 @@ def insertionSort(arr):
     return arr
 
 '''
-(4) 希尔排序
+(4) 希尔排序(对直接插入排序的优化，属于插入排序类)
     希尔排序基于插入排序以下两点性质改进：
         a)插入排序在对几乎已经排好序的数据操作时，效率高，即可以达到线性排序的效率。
         b)插入排序一般来说是低效的，因为插入排序每次只能将数据移动一位。
@@ -90,7 +90,7 @@ def shellSort(arr):
     return arr
 
 '''
-(5) 归并排序
+(5) 归并排序（属于归并排序类）
     归并排序利用分治（归并）思想，两种实现方法：自上而下的递归实现（需注意递归深度）、自下而上的迭代实现。
     算法步骤：
         a)初始化序列含有n个记录，则可以看作含有n个有序的子序列，每个子序列长度为1,然后两两归并，得到(n+1)//2个长度为2或1的有序子序列。
@@ -118,12 +118,48 @@ def merge(left,right):
         result = result + right
     return result
 
+'''
+(5) 快速排序（冒泡排序的改进，属于交换排序类）
+        快速排序使用分治思想，通过增大比较和移动交换的距离，将关键字较大的直接从前面移动到后面，
+    将关键字较小的直接从后面移动到前面，减少了总的移动和交换的次数。
+    算法步骤：
+        a)从数列中选取一个元素作为基准点（pivot）。
+        b)对数列重新排序。所有小于基准点的元素放在基准点的前面，所有大于基准点的元素放在基准点后面，等于基准点的元素放在任意一边。
+            在这个分区退出之后，该基准点就处于数列的中间位置。此过程称为分区（patition）操作。
+        c)递归的把小于基准点的子数列和大于基准点的子数列重复以上操作，直到数列完全有序。
+    快速排序是原地排序，但不是稳定算法。平均时间复杂度O(nlogn)，最坏时间复杂度O(n^2)(pivotkey的选取尤为重要)，空间复杂度O(1)。
+'''
+# 递归方法实现快速排序
+def quickSort(arr,left=None,right=None):
+    left = 0 if not isinstance(left,(int, float)) else left
+    right = len(arr)-1 if not isinstance(right,(int, float)) else right
+    if left < right:
+        patitionIndex = patition(arr, left, right)
+        quickSort(arr, left, patitionIndex-1)
+        quickSort(arr, patitionIndex+1, right)
+    return arr
+
+def patition(arr, left, right):
+    pivotkey = arr[left]
+    while left < right:
+        while left < right and arr[right] >= pivotkey:
+            right -= 1
+        swp(arr, left, right)
+        while left < right and arr[left] <= pivotkey:
+            left += 1
+        swp(arr, left, right)
+    return left
+
+def swp(arr,i, j):
+    arr[i], arr[j] = arr[j],  arr[i]
 
 if __name__=="__main__":
-    List = list(range(10,0,-1))
+    List = list(range(100,0,-1))
     List1 = bubbleSort(List[:])
     List2 = selectionSort(List[:])
     List3 = insertionSort(List[:])
     List4 = shellSort(List[:])
     List5 = mergeSort(List[:])
-    print(List, '\n', List1, '\n', List2, '\n', List3, '\n', List4, '\n', List5)
+    List6 = quickSort(List[:])
+    print(List, '\n', List1, '\n', List2, '\n', List3, '\n', List4, '\n', List5,
+          '\n', List6)
