@@ -10,7 +10,6 @@
     （5）归并排序     （10）基数排序
 '''
 
-
 '''
 (1) 冒泡排序
     从后向前，相邻元素两两比较。如果第一个比第二个大，就交换他们两个。
@@ -153,13 +152,46 @@ def patition(arr, left, right):
 def swp(arr,i, j):
     arr[i], arr[j] = arr[j],  arr[i]
 
+'''
+(6) 堆排序（选择排序的改进，属于选择排序类）
+        堆是有以下性质的完全二叉树：每一个节点的值都大于或等于其左右孩子节点的值，称为大顶堆，或者每一个节点的值都小于或等于其左右孩子节点的值，称为小顶堆。
+        构建大顶堆：从下往上，从右到左，将每一个非叶子节点当作根节点，将其和其子树调整成大顶堆。
+        算法步骤：
+            堆排序（假设使用大顶堆）：将带排序的序列构造成一个大顶堆。此时，整个序列的最大值就是堆顶的根节点。将它移走（其实就是
+            将它与堆数组的末尾元素交换，此时末尾元素就是最大值），然后将剩余n-1个序列重新构造成一个大顶堆，就这样就会得到n个元素的次大值
+            如此反复便能得到一个有序序列了。
+        堆排序是原地排序，但不是稳定算法。平均时间复杂度O(nlogn)，最坏时间复杂度O(nlogn)。空间复杂度O(1)。
+'''
+def heapSort(arr):
+    lenght = len(arr)-1
+    for i in range(lenght//2, 0, -1):
+        heapAdjust(arr, i, lenght)
+    for j in range(lenght, 1, -1):
+        swp(arr,1,j)
+        heapAdjust(arr,1,j-1)
+
+def heapAdjust(arr,s,n):
+    tmp = arr[s]
+    i = 2*s
+    while i <= n:
+        if i < n and arr[i] < arr[i+1]:
+            i += 1
+        if tmp >= arr[i]:
+            break
+        arr[s] = arr[i]
+        s = i
+        i *= 2
+    arr[s] = tmp
+
 if __name__=="__main__":
-    List = list(range(100,0,-1))
+    List = list(range(10,0,-1))
     List1 = bubbleSort(List[:])
     List2 = selectionSort(List[:])
     List3 = insertionSort(List[:])
     List4 = shellSort(List[:])
     List5 = mergeSort(List[:])
     List6 = quickSort(List[:])
+    heapList = [0, 50,10,90,30,70,40,80,60,20]
+    heapSort(heapList)
     print(List, '\n', List1, '\n', List2, '\n', List3, '\n', List4, '\n', List5,
-          '\n', List6)
+          '\n', List6, '\n', heapList)
