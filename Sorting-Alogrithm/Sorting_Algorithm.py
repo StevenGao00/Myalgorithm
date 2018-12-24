@@ -163,12 +163,14 @@ def swp(arr,i, j):
         堆排序是原地排序，但不是稳定算法。平均时间复杂度O(nlogn)，最坏时间复杂度O(nlogn)。空间复杂度O(1)。
 '''
 def heapSort(arr):
-    lenght = len(arr)-1
+    lenght = len(arr)
+    arr.insert(0,0)
     for i in range(lenght//2, 0, -1):
         heapAdjust(arr, i, lenght)
     for j in range(lenght, 1, -1):
         swp(arr,1,j)
         heapAdjust(arr,1,j-1)
+    arr.pop(0)
 
 def heapAdjust(arr,s,n):
     tmp = arr[s]
@@ -191,7 +193,7 @@ if __name__=="__main__":
     List4 = shellSort(List[:])
     List5 = mergeSort(List[:])
     List6 = quickSort(List[:])
-    heapList = [0, 50,10,90,30,70,40,80,60,20]
+    heapList = List[:]    #heapList = [50,10,90,30,70,40,80,60,20]
     heapSort(heapList)
     print(List, '\n', List1, '\n', List2, '\n', List3, '\n', List4, '\n', List5,
           '\n', List6, '\n', heapList)
