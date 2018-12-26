@@ -154,13 +154,13 @@ def swp(arr,i, j):
 
 '''
 (6) 堆排序（选择排序的改进，属于选择排序类）
-        堆是有以下性质的完全二叉树：每一个节点的值都大于或等于其左右孩子节点的值，称为大顶堆，或者每一个节点的值都小于或等于其左右孩子节点的值，称为小顶堆。
-        构建大顶堆：从下往上，从右到左，将每一个非叶子节点当作根节点，将其和其子树调整成大顶堆。
-        算法步骤：
-            堆排序（假设使用大顶堆）：将带排序的序列构造成一个大顶堆。此时，整个序列的最大值就是堆顶的根节点。将它移走（其实就是
-            将它与堆数组的末尾元素交换，此时末尾元素就是最大值），然后将剩余n-1个序列重新构造成一个大顶堆，就这样就会得到n个元素的次大值
-            如此反复便能得到一个有序序列了。
-        堆排序是原地排序，但不是稳定算法。平均时间复杂度O(nlogn)，最坏时间复杂度O(nlogn)。空间复杂度O(1)。
+    堆是有以下性质的完全二叉树：每一个节点的值都大于或等于其左右孩子节点的值，称为大顶堆，或者每一个节点的值都小于或等于其左右孩子节点的值，称为小顶堆。
+    构建大顶堆：从下往上，从右到左，将每一个非叶子节点当作根节点，将其和其子树调整成大顶堆。
+    算法步骤：
+        堆排序（假设使用大顶堆）：将带排序的序列构造成一个大顶堆。此时，整个序列的最大值就是堆顶的根节点。将它移走（其实就是
+        将它与堆数组的末尾元素交换，此时末尾元素就是最大值），然后将剩余n-1个序列重新构造成一个大顶堆，就这样就会得到n个元素的次大值
+        如此反复便能得到一个有序序列了。
+    堆排序是原地排序，但不是稳定算法。平均时间复杂度O(nlogn)，最坏时间复杂度O(nlogn)。空间复杂度O(1)。
 '''
 def heapSort(arr):
     lenght = len(arr)
@@ -185,6 +185,27 @@ def heapAdjust(arr,s,n):
         i *= 2
     arr[s] = tmp
 
+'''
+(6) 计数排序
+    计数排序的核心是在于将输入的数值转化为键存储在额外开辟的数组空间中。
+    作为线性时间复杂度的排序，计数排序要求输入的数据必须是有确定范围的整数。注意分桶的大小。
+'''
+def countingSort(arr):
+    bucketLen = max(arr) + 1
+    bucket = [0]*bucketLen
+    sortedIndex = 0
+    for i in arr:
+        if not bucket[i]:
+            bucket[i]=0
+        bucket[i] += 1
+    for j in range(bucketLen):
+        while bucket[j]>0:
+            arr[sortedIndex] = j
+            sortedIndex += 1
+            bucket[j] -= 1
+    return arr
+
+
 if __name__=="__main__":
     List = list(range(10,0,-1))
     List1 = bubbleSort(List[:])
@@ -195,5 +216,7 @@ if __name__=="__main__":
     List6 = quickSort(List[:])
     heapList = List[:]    #heapList = [50,10,90,30,70,40,80,60,20]
     heapSort(heapList)
+    countingList = [50,10,90,30,70,40,40,80,60,20,10,90,30,70,40,40,80,60,20,50,10,90,30,70,40,40,80,60,20,10,90,30,70,40,40,80,60,20]
+    countingSortedList = countingSort(countingList)
     print(List, '\n', List1, '\n', List2, '\n', List3, '\n', List4, '\n', List5,
-          '\n', List6, '\n', heapList)
+          '\n', List6, '\n', heapList, '\n', countingSortedList)
