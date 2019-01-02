@@ -8,7 +8,7 @@ from itertools import chain
 
 class CircularQueue:
     def __init__(self, capacity:int):
-        self._capacity = capacity+1   # 默认最后一个不存储数据，浪费一个存储空间
+        self._capacity = capacity + 1   # 默认最后一个不存储数据，浪费一个存储空间
         self._items = [None]*self._capacity
         self._head = 0
         self._tail = 0
