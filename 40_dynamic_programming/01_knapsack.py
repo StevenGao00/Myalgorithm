@@ -7,9 +7,9 @@ def bag(items_info:List[int], capacity:int) -> int:
     """
     计算能装进背包的物品组合的最大重量
 
-    :param items_info:
-    :param capacity:
-    :return:
+    :param items_info: 每一个物品的重量
+    :param capacity: 背包的容量
+    :return: 最大装载重量
     """
     # 初始化状态矩阵
     n = len(items_info)
@@ -34,9 +34,9 @@ def bag_with_max_value(items_info:List[Tuple[int, int]], capacity:int) -> int:
     """
     计算能装进背包的物品组合的最大价值
 
-    :param items_info:
-    :param capacity:
-    :return:
+    :param items_info: 物品的重量和价值
+    :param capacity: 背包容量
+    :return: 最大装载价值
     """
     # 初始化状态矩阵
     n = len(items_info)
