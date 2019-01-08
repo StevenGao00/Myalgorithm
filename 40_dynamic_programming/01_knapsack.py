@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 
-from typing import List, Tuple
+from typing import List, Tuple, Optional
 
 def bag(items_info:List[int], capacity:int) -> int:
     """
@@ -58,7 +58,7 @@ def bag_with_max_value(items_info:List[Tuple[int, int]], capacity:int) -> int:
                     )
     return max(memo[-1])
 
-def full_reduction(items:List[int], w:int):
+def full_reduction(items:List[int], w:int) -> Optional[list]:
     """
     淘宝双十一购物节满减活动比如‘满200￥减50￥’.假设女友购物车有 n 个（n>100）个想买的商品，她希望从中选几个，
     在凑够满减条件下，让选出来的商品价格总和最大程度接近满减条件（200￥）。
