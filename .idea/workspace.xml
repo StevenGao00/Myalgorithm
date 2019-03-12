@@ -6,11 +6,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="470696a1-efd9-4d19-99ba-de22e7bed5d9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geek_alogrithm/alogrithm.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test1_taobao.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test2_minDist.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test3_coins.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test4_insertSort.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/42_dynamic_programming/LIS_BT.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/42_dynamic_programming/LIS_DP.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/42_dynamic_programming/levenshtein_distance.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test5_LIS_DP.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test6_LIS_BT.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,11 +26,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="alogrithm.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/geek_alogrithm/alogrithm.py">
+      <file leaf-file-name="levenshtein_distance.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/42_dynamic_programming/levenshtein_distance.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="746">
-              <caret line="154" column="18" lean-forward="true" selection-start-line="154" selection-start-column="18" selection-end-line="154" selection-end-column="18" />
+            <state relative-caret-position="417">
+              <caret line="57" column="26" lean-forward="true" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LIS_DP.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/42_dynamic_programming/LIS_DP.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -70,6 +81,11 @@
         <option value="$PROJECT_DIR$/test/test3_coins.py" />
         <option value="$PROJECT_DIR$/test/test4_insertSort.py" />
         <option value="$PROJECT_DIR$/geek_alogrithm/alogrithm.py" />
+        <option value="$PROJECT_DIR$/test/test4_dp.py" />
+        <option value="$PROJECT_DIR$/test/test6_LIS_BT.py" />
+        <option value="$PROJECT_DIR$/42_dynamic_programming/LIS_DP.py" />
+        <option value="$PROJECT_DIR$/42_dynamic_programming/LIS_BT.py" />
+        <option value="$PROJECT_DIR$/42_dynamic_programming/levenshtein_distance.py" />
       </list>
     </option>
   </component>
@@ -122,6 +138,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Myalgorithm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Myalgorithm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="42_dynamic_programming" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -132,25 +162,8 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.test4_insertSort">
-    <configuration default="false" name="min_dist" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/41_dynamic_programming" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Myalgorithm" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/41_dynamic_programming/min_dist.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="test1_taobao" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.levenshtein_distance">
+    <configuration default="false" name="test4_dp" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -162,12 +175,12 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Myalgorithm" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test1_taobao.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test5_LIS_DP.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="test2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="test6_LIS_BT" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -179,41 +192,58 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Myalgorithm" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test2_minDist.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test6_LIS_BT.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="test3_coins" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="LIS_BT" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/42_dynamic_programming" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Myalgorithm" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test3_coins.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/42_dynamic_programming/LIS_BT.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="test4_insertSort" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="LIS_DP" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/42_dynamic_programming" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Myalgorithm" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test4_insertSort.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/42_dynamic_programming/LIS_DP.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="levenshtein_distance" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/42_dynamic_programming" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Myalgorithm" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/42_dynamic_programming/levenshtein_distance.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -353,19 +383,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.min_dist" />
-      <item index="1" class="java.lang.String" itemvalue="Python.test1_taobao" />
-      <item index="2" class="java.lang.String" itemvalue="Python.test2" />
-      <item index="3" class="java.lang.String" itemvalue="Python.test3_coins" />
-      <item index="4" class="java.lang.String" itemvalue="Python.test4_insertSort" />
+      <item index="0" class="java.lang.String" itemvalue="Python.test4_dp" />
+      <item index="1" class="java.lang.String" itemvalue="Python.test6_LIS_BT" />
+      <item index="2" class="java.lang.String" itemvalue="Python.LIS_BT" />
+      <item index="3" class="java.lang.String" itemvalue="Python.LIS_DP" />
+      <item index="4" class="java.lang.String" itemvalue="Python.levenshtein_distance" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.test4_insertSort" />
-        <item index="1" class="java.lang.String" itemvalue="Python.test3_coins" />
-        <item index="2" class="java.lang.String" itemvalue="Python.test2" />
-        <item index="3" class="java.lang.String" itemvalue="Python.min_dist" />
-        <item index="4" class="java.lang.String" itemvalue="Python.test1_taobao" />
+        <item index="0" class="java.lang.String" itemvalue="Python.levenshtein_distance" />
+        <item index="1" class="java.lang.String" itemvalue="Python.LIS_DP" />
+        <item index="2" class="java.lang.String" itemvalue="Python.test4_dp" />
+        <item index="3" class="java.lang.String" itemvalue="Python.LIS_BT" />
+        <item index="4" class="java.lang.String" itemvalue="Python.test6_LIS_BT" />
       </list>
     </recent_temporary>
   </component>
@@ -393,18 +423,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1600" height="813" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14593908" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12309644" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24122807" sideWeight="0.49746192" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.49746192" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.49492386" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27192983" sideWeight="0.5025381" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25438598" sideWeight="0.49492386" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27192983" sideWeight="0.5025381" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25438598" sideWeight="0.49492386" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.49746192" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3406433" sideWeight="0.49746192" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3611111" sideWeight="0.49746192" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -435,6 +465,16 @@
           <line>13</line>
           <option name="timeStamp" value="49" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test/test6_LIS_BT.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test/test5_LIS_DP.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -443,7 +483,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="50" />
+      <option name="time" value="60" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -626,14 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="309" column="0" lean-forward="false" selection-start-line="309" selection-start-column="0" selection-end-line="309" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/41_dynamic_programming/dynamic_programming.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="422">
@@ -712,6 +744,54 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="746">
           <caret line="154" column="18" lean-forward="true" selection-start-line="154" selection-start-column="18" selection-end-line="154" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test6_LIS_BT.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-420">
+          <caret line="5" column="9" lean-forward="true" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test5_LIS_DP.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1643">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="56" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/42_dynamic_programming/LIS_BT.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="309" column="0" lean-forward="false" selection-start-line="309" selection-start-column="0" selection-end-line="309" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/42_dynamic_programming/levenshtein_distance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="57" column="26" lean-forward="true" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/42_dynamic_programming/LIS_DP.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
           <folding />
         </state>
       </provider>
