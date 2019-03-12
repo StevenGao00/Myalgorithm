@@ -3,6 +3,7 @@
 
 from typing import List, Optional
 
+#leetcode:https://leetcode.com/problems/longest-increasing-subsequence/
 #动态规划，时间复杂度O(n^2),空间复杂度O(n)
 def longest_increasing_subsequence(nums:List) -> Optional[int]:
     """

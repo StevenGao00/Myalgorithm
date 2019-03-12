@@ -6,12 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="470696a1-efd9-4d19-99ba-de22e7bed5d9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/42_dynamic_programming/LIS_BT.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/42_dynamic_programming/LIS_DP.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/42_dynamic_programming/levenshtein_distance.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test5_LIS_DP.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test6_LIS_BT.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/42_dynamic_programming/LIS_DP.py" afterPath="$PROJECT_DIR$/42_dynamic_programming/LIS_DP.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,7 +24,7 @@
       <file leaf-file-name="levenshtein_distance.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/42_dynamic_programming/levenshtein_distance.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
+            <state relative-caret-position="-141">
               <caret line="57" column="26" lean-forward="true" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
               <folding />
             </state>
@@ -39,8 +34,8 @@
       <file leaf-file-name="LIS_DP.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/42_dynamic_programming/LIS_DP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+            <state relative-caret-position="279">
+              <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -83,9 +78,9 @@
         <option value="$PROJECT_DIR$/geek_alogrithm/alogrithm.py" />
         <option value="$PROJECT_DIR$/test/test4_dp.py" />
         <option value="$PROJECT_DIR$/test/test6_LIS_BT.py" />
-        <option value="$PROJECT_DIR$/42_dynamic_programming/LIS_DP.py" />
         <option value="$PROJECT_DIR$/42_dynamic_programming/LIS_BT.py" />
         <option value="$PROJECT_DIR$/42_dynamic_programming/levenshtein_distance.py" />
+        <option value="$PROJECT_DIR$/42_dynamic_programming/LIS_DP.py" />
       </list>
     </option>
   </component>
@@ -121,34 +116,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Myalgorithm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Myalgorithm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Myalgorithm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Myalgorithm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Myalgorithm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="42_dynamic_programming" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -782,7 +749,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/42_dynamic_programming/levenshtein_distance.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
+        <state relative-caret-position="-141">
           <caret line="57" column="26" lean-forward="true" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
           <folding />
         </state>
@@ -790,8 +757,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/42_dynamic_programming/LIS_DP.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        <state relative-caret-position="279">
+          <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
           <folding />
         </state>
       </provider>
